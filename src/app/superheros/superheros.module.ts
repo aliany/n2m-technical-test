@@ -10,6 +10,7 @@ import { ListSuperherosComponent } from './pages/list-superheros/list-superheros
 import { SuperheroCardComponent } from './component/superhero-card/superhero-card.component';
 import { ImagePipePipe } from './pipes/image-pipe.pipe';
 import { SuperheroComponent } from './pages/superhero/superhero.component';
+import { AddSuperheroComponent } from './pages/add-superhero/add-superhero.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { SuperheroComponent } from './pages/superhero/superhero.component';
     ListSuperherosComponent,
     SuperheroCardComponent,
     ImagePipePipe,
-    SuperheroComponent
+    SuperheroComponent,
+    AddSuperheroComponent
   ],
   imports: [
     CommonModule,

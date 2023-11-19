@@ -20,8 +20,8 @@ export class SuperheroComponent {
 
   ngOnInit(): void {
     this.activatedRoute.params
-    .pipe(switchMap(({id}) => this.service.getHeroePorId(id)))
-    .subscribe( heroe => this.superhero = heroe);
+    .pipe(switchMap(({id}) => this.service.getHeroById(id)))
+    .subscribe( superhero => this.superhero = superhero);
   }
 
   regresar(){

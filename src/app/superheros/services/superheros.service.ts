@@ -18,8 +18,8 @@ export class SuperherosService {
     return this.http.get<Superhero[]>( `${ this.baseUrl }/superheros`);
   }
 
-  getHeroePorId( id: string): Observable<Superhero>{
-    return this.http.get<Superhero>(`${ this.baseUrl }/superhero/${id}`);
+  getHeroById( id: string): Observable<Superhero>{
+    return this.http.get<Superhero>(`${ this.baseUrl }/superheros/${id}`);
   }
 
   getSugerencias(termino: string): Observable<Superhero[]>{
@@ -27,14 +27,14 @@ export class SuperherosService {
   }
 
   agregarHeroe(superhero: Superhero): Observable<Superhero>{
-    return this.http.post<Superhero>(`${ this.baseUrl }/superhero`, superhero)
+    return this.http.post<Superhero>(`${ this.baseUrl }/superheros`, superhero)
   }
 
   actualizarHeroe(superhero: Superhero): Observable<Superhero>{
-    return this.http.put<Superhero>(`${ this.baseUrl }/superhero/${superhero.id}`, superhero)
+    return this.http.put<Superhero>(`${ this.baseUrl }/superheros/${superhero.id}`, superhero)
   }
 
   eliminarHeroe(id: string): Observable<any>{
-    return this.http.delete<any>(`${ this.baseUrl }/superhero/${id}`);
+    return this.http.delete<any>(`${ this.baseUrl }/superheros/${id}`);
   }
 }

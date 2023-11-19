@@ -1,8 +1,10 @@
+import { SuperheroComponent } from './pages/superhero/superhero.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { ListSuperherosComponent } from './pages/list-superheros/list-superheros.component';
+import { AddSuperheroComponent } from './pages/add-superhero/add-superhero.component';
 
 const routes: Routes = [
   {
@@ -12,6 +14,14 @@ const routes: Routes = [
       {
         path: 'listado',
         component: ListSuperherosComponent,
+      },
+      {
+        path: ':id',
+        component: SuperheroComponent,
+      },
+      {
+        path: 'agregar',
+        component: AddSuperheroComponent,
       },
       {
         path: '**',
