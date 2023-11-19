@@ -1,4 +1,5 @@
 # Prueba técnica frontend - W2M
+
  
 Importante:
 Se debe utilizar la última versión LTS de Angular, Typescript y de cualquier librería que se use en el proyecto.Desarrollar, utilizando Angular y Typescript, una aplicación SPA que permita hacer un mantenimiento de súper héroes:
@@ -38,4 +39,16 @@ Se valorará positivamente:
 - Uso de programación reactiva.
 - Código legible usando lambdas.
 
+-----------------------------------------------------------------------
+# SUPERHEROS-APP-W2M
 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+
+## Mock server
+Run `npm run start-server`
+Go to the browser and enter the URL: http://localhost:3000/api/users

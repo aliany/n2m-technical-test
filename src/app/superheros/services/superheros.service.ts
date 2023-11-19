@@ -14,7 +14,7 @@ export class SuperherosService {
 
   constructor( private http: HttpClient) { }
 
-  getHeroes(): Observable<Superhero[]>{
+  getHeroe(): Observable<Superhero[]>{
     return this.http.get<Superhero[]>( `${ this.baseUrl }/superheros`);
   }
 

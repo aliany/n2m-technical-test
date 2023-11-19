@@ -3,10 +3,18 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'heroes',
+    path: 'superheros',
     loadChildren: () => import('./superheros/superheros.module').then( modulo => modulo.SuperherosModule),
   },
+  {
+    path: '**',
+    //component: ErrorPageComponent
+    redirectTo: 'superheros'
+  },
 ];
+
+
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

@@ -1,0 +1,30 @@
+<mat-grid-list cols="1" *ngIf="!superhero; else divSuperhero">
+  <mat-grid-tile>
+    <mat-spinner color="accent">
+
+    </mat-spinner>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<ng-template #divSuperhero>
+  <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="30px">
+    <div fxFlex="50">
+     <h1> {{superhero.superhero}}
+      <small> - {{superhero.alter_ego}}</small></h1>
+      <mat-divider></mat-divider>
+      <br>
+      <img [src]=" superhero | imagePipe">
+    </div>
+    <div fxFlex="50">
+      <mat-list>
+        <mat-list-item> {{superhero.first_appearance}}</mat-list-item>
+        <mat-list-item> {{superhero.characters}}</mat-list-item>
+        <mat-list-item> {{superhero.alter_ego}}</mat-list-item>
+      </mat-list>
+      <br>
+      <button mat-button color="accent" (click)="regresar()">Regresar</button>
+    </div>
+
+  </div>
+</ng-template>
+
