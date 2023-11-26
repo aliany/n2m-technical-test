@@ -11,6 +11,7 @@ import { SuperheroCardComponent } from './component/superhero-card/superhero-car
 import { ImagePipePipe } from './pipes/image-pipe.pipe';
 import { SuperheroComponent } from './pages/superhero/superhero.component';
 import { AddSuperheroComponent } from './pages/add-superhero/add-superhero.component';
+import { SearchSuperheroComponent } from './pages/search-superhero/search-superhero.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { AddSuperheroComponent } from './pages/add-superhero/add-superhero.compo
     SuperheroCardComponent,
     ImagePipePipe,
     SuperheroComponent,
-    AddSuperheroComponent
+    AddSuperheroComponent,
+    SearchSuperheroComponent
   ],
   imports: [
     CommonModule,
@@ -28,6 +30,6 @@ import { AddSuperheroComponent } from './pages/add-superhero/add-superhero.compo
     FormsModule,
     SuperherosRoutingModule,
     MaterialModule,
-  ]
+  ],
 })
 export class SuperherosModule { }

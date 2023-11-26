@@ -1,26 +1,28 @@
-<mat-sidenav-container fullscreen>
-  <mat-sidenav #sidenav mode="push">
-    <mat-toolbar color="accent">
-      <span>Menú</span>
-      <span class="spacer"></span>
-      <button mat-icon-button (click)="sidenav.toggle()">
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+               (closed)="events.push('close!')">
+    <mat-toolbar color="primary">
+      <button mat-icon-button>
         <mat-icon>menu</mat-icon>
       </button>
+      <span>Menú</span>
     </mat-toolbar>
     <mat-nav-list>
-      <a routerLink="./listado" mat-list-item (click)="sidenav.toggle()">
-        <mat-icon mat-list-icon>label</mat-icon>
-        <span>Listado de superheroes</span>
-      </a>
       <a routerLink="./agregar" mat-list-item (click)="sidenav.toggle()">
-        <mat-icon mat-list-icon>add</mat-icon>
+        <mat-icon mat-list-icon class="align-icon">add</mat-icon>
         <span>Añadir superheroe</span>
+      </a>
+      <a routerLink="./buscar" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon class="align-icon">search</mat-icon>
+        <span>Buscar superheroe</span>
       </a>
     </mat-nav-list>
   </mat-sidenav>
 
+
   <div class="container">
     <router-outlet></router-outlet>
     </div>
-
 </mat-sidenav-container>
+
+

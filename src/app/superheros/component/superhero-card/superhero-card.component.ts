@@ -13,6 +13,7 @@ export class SuperheroCardComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
   }
+
   ngOnDestroy(): void {
   }
 
